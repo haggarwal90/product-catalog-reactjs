@@ -1,5 +1,5 @@
 #!/bin/sh            
- cd /home/himanshu/Documents/TestProjects/TestJerkins   
+ cd /var/lib/jenkins/workspace/product_catalog_jerkins   
  npm install --production
  npm start
  exit       
