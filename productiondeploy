@@ -1,6 +1,6 @@
 #!/bin/sh            
  cd /var/lib/jenkins/workspace/product_catalog_jerkins   
  npm install
- eslint -c config.eslintrc -f checkstyle apps/**/* > eslint.xml
+ eslint -c .eslintrc -f checkstyle apps/**/* > eslint.xml
  exit       
 EOF
