@@ -117,24 +117,30 @@ export class Products extends React.Component {
             <div>
                 <div>
                     <h3>Play with the products</h3>
-                    <ReactTable
-                        className='-striped -highlight'
-                        data={this.state.products}
-                        columns={columns}
-                        defaultPageSize={5}
-                        getTdProps={(state, rowInfo, column, instance) => {
-                            return {
-                                onClick: e => {
-                                   //console.log('A Td Element was clicked!')
-                                   //console.log('it produced this event:', e)
-                                    console.log('It was in this column:', column)
-                                    console.log('It was in this row:', rowInfo)
-                                    //console.log('It was in this table instance:', instance)
-                                    this.getProduct(rowInfo.index)
+                    <div ref={(input) => {
+                        this.reacTableinput = input;
+                        console.log('this.reacTableinput ',this.reacTableinput);
+                    }} id="montu">
+                        <ReactTable
+                            className='-striped -highlight'
+                            data={this.state.products}
+                            columns={columns}
+                            defaultPageSize={5}
+                            getTdProps={(state, rowInfo, column, instance) => {
+                                return {
+                                    onClick: e => {
+                                        //console.log('A Td Element was clicked!')
+                                        //console.log('it produced this event:', e)
+                                        console.log('It was in this column:', column)
+                                        console.log('It was in this row:', rowInfo)
+                                        //console.log('It was in this table instance:', instance)
+                                        this.getProduct(rowInfo.index)
+                                    }
                                 }
-                            }
-                        }}
-                    />
+                            }}
+                        />
+                    </div>
+
                     {/*<BootstrapTable data={this.state.products} selectRow={ selectRowProp } striped hover>
                         <TableHeaderColumn isKey={true} dataField='name'>Product Name</TableHeaderColumn>
                         <TableHeaderColumn dataField='description'>Product Description</TableHeaderColumn>

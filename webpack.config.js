@@ -21,6 +21,17 @@ var config = {
                     presets: ["react", "es2015", "stage-2"]
                 }
             },
+            {
+                test: /\.js?/,
+                exclude: /node_modules/,
+                loader: 'eslint-loader',
+                options: {
+                    outputReport: {
+                        filePath: 'reports/eslint_html_[hash].html',
+                        formatter: require('eslint/lib/formatters/html')
+                    }
+                }
+            },
             {test: /\.css$/, loader: 'style-loader!css-loader'},
         ]
     }
