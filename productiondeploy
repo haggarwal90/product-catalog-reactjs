@@ -1,6 +1,6 @@
 #!/bin/sh            
  cd /var/lib/jenkins/workspace/product_catalog_jerkins   
- npm install --production
+ npm install
  npm start
  exit       
 EOF
