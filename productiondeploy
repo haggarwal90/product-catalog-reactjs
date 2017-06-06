@@ -1,6 +1,5 @@
 #!/bin/sh            
- cd /home/himanshu/Documents/TestProjects/TestJerkins
- git pull       
+ cd /home/himanshu/Documents/TestProjects/TestJerkins   
  npm install --production
  npm start
  exit       
